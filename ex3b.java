@@ -12,18 +12,18 @@ public static void main(String[] args) {
 			
 			while (!verifyNumber(str)) {
 					str = System.console().readLine();
-					System.out.println("TEST");
+					
 					
 			}
 			int size = Integer.parseInt(str);
-			System.out.println(size);
 			
-			System.out.println("Give me 10 numbers");
 			
-				double[] myArray = new double[10];
+			System.out.println("Give me " + size + " numbers");
+			
+				double[] myArray = new double[size];
 				int counter = 0;
 				double sum = 0;
-			while (counter < 10) {
+			while (counter < size) {
 				try {
 						myArray[counter] = Double.parseDouble(System.console().readLine());
 						counter++;
@@ -33,11 +33,11 @@ public static void main(String[] args) {
 					}
 			}	
 				
-				for (int i=0 ; i<10; i++) {
+				for (int i=0 ; i<size; i++) {
 					
 					sum = sum + myArray[i];
 				}
-				double result = sum/10;
+				double result = sum/size;
 				System.out.println("Your result is : " + result);
 		}
 		
